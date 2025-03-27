@@ -55,3 +55,9 @@ variable "license_template" {
   type        = string
   default     = null
 }
+
+variable "organization" {
+  description = "organization"
+  type        = string
+  default     = "mitdo-dev"
+}
