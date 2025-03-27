@@ -13,10 +13,3 @@ resource "github_repository" "this" {
   allow_rebase_merge   = true
   delete_branch_on_merge = true
 }
-
-output "repo_name" {
-  value = github_repository.this.name
-}
-output "repo_html_url" {
-  value = github_repository.this.html_url
-}
