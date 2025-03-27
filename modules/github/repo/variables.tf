@@ -58,9 +58,9 @@ variable "license_template" {
 
 variable "template" {
   type = object({
-    owner      = optional(string)
+    owner      = optional(string, "mitdo-dev")
     repository = string
   })
-  description = "Template repository config"
+  description = "Template repository"
   default     = null
 }

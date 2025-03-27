@@ -20,11 +20,11 @@ resource "github_repository" "this" {
   dynamic "template" {
     for_each = var.template != null ? [var.template] : []
     content {
-      owner      = template.value.owner != null ? template.value.owner : "mitdo-dev"
+      owner      = template.value.owner
       repository = template.value.repository
     }
   }
-  
+
   vulnerability_alerts = true
   allow_merge_commit   = true
   allow_squash_merge   = true
