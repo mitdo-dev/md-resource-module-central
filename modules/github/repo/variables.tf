@@ -56,14 +56,11 @@ variable "license_template" {
   default     = null
 }
 
-variable "organization" {
-  description = "Org"
-  type        = string
-  default     = "mitdo-dev"
-}
-
-variable "template_repo" {
-  description = "Template repo"
-  type        = string
+variable "template" {
+  type = object({
+    owner      = optional(string)
+    repository = string
+  })
+  description = "Template repository config"
   default     = null
 }
