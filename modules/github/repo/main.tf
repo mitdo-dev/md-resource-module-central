@@ -16,6 +16,10 @@ resource "github_repository" "this" {
   auto_init          = var.auto_init
   license_template   = var.license_template
   topics             = var.topics
+  template {
+    owner      = var.organization        
+    repository = var.template_repo
+  }
   vulnerability_alerts = true
   allow_merge_commit   = true
   allow_squash_merge   = true
